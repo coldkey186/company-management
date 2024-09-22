@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "551992631951",
+    "project_id": "companymanagement-fea74",
+    "storage_bucket": "companymanagement-fea74.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:551992631951:android:6ed4485cf82e3b3c5746fa",
+        "android_client_info": {
+          "package_name": "com.example.company_management"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBy3Jg-RmrmyCHIkPlYa-dPT6Wo4KLiS98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

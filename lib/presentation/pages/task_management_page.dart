@@ -18,12 +18,12 @@ class _TaskManagementPageState extends State<TaskManagementPage> {
 
   // Hiển thị thông báo lỗi nếu có
   Widget _buildErrorMessage() {
-    if (_errorMessage == null) return SizedBox.shrink(); // Nếu không có lỗi, không hiển thị gì
+    if (_errorMessage == null) return const SizedBox.shrink(); // Nếu không có lỗi, không hiển thị gì
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Text(
         _errorMessage!,
-        style: TextStyle(color: Colors.red, fontSize: 16),
+        style: const TextStyle(color: Colors.red, fontSize: 16),
       ),
     );
   }
@@ -154,7 +154,7 @@ class _TaskManagementPageState extends State<TaskManagementPage> {
     return Scaffold(
       appBar: AppBar(title: const Text('Quản lý công việc')),
       body: _isLoading
-          ? Center(child: CircularProgressIndicator()) // Hiển thị vòng tròn chờ khi đang xử lý
+          ? const Center(child: CircularProgressIndicator()) // Hiển thị vòng tròn chờ khi đang xử lý
           : Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,

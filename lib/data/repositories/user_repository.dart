@@ -1,17 +1,27 @@
-// lib/data/repositories/user_repository.dart
-import '../models/user_model.dart';
-import '../services/user_service.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:company_management/models/user_model.dart';
 
 class UserRepository {
-  final UserService _userService = UserService();
+  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
-  // Tạo người dùng trong Firestore
-  Future<void> createUser(UserModel user) async {
-    return _userService.addUser(user);
+  // Lấy danh sách người dùng
+  Stream<List<UserModel>> getUsers() {
+    return _firestore.collection('users').snapshots().map((snapshot) =>
+        snapshot.docs.map((doc) => UserModel.fromFirestore(doc)).toList());
   }
 
-  // Fetch user thông qua UserService
-  Future<UserModel?> fetchUser(String id) {
-    return _userService.getUserById(id);
+  // Thêm người dùng mới
+  Future<void> addUser(UserModel user) {
+    return _firestore.collection('users').add(user.toMap());
+  }
+
+  // Cập nhật thông tin người dùng
+  Future<void> updateUser(String userId, UserModel user) {
+    return _firestore.collection('users').doc(userId).update(user.toMap());
+  }
+
+  // Xóa người dùng
+  Future<void> deleteUser(String userId) {
+    return _firestore.collection('users').doc(userId).delete();
   }
 }

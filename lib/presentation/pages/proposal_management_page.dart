@@ -18,12 +18,12 @@ class _ProposalManagementPageState extends State<ProposalManagementPage> {
 
   // Hiển thị thông báo lỗi nếu có
   Widget _buildErrorMessage() {
-    if (_errorMessage == null) return SizedBox.shrink(); // Nếu không có lỗi, không hiển thị
+    if (_errorMessage == null) return const SizedBox.shrink(); // Nếu không có lỗi, không hiển thị
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Text(
         _errorMessage!,
-        style: TextStyle(color: Colors.red, fontSize: 16),
+        style: const TextStyle(color: Colors.red, fontSize: 16),
       ),
     );
   }
@@ -185,7 +185,7 @@ class _ProposalManagementPageState extends State<ProposalManagementPage> {
     return Scaffold(
       appBar: AppBar(title: const Text('Quản lý đề xuất')),
       body: _isLoading
-          ? Center(child: CircularProgressIndicator()) // Hiển thị vòng tròn loading khi đang xử lý
+          ? const Center(child: CircularProgressIndicator()) // Hiển thị vòng tròn loading khi đang xử lý
           : Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,

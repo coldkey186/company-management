@@ -7,6 +7,7 @@ import 'presentation/pages/proposal_management_page.dart';
 import 'presentation/pages/task_management_page.dart';
 import 'presentation/pages/create_user_page.dart';
 import 'presentation/pages/company_structure_page.dart';
+import 'presentation/pages/user_list_page.dart';
 
 // Cấu hình Firebase cho Web
 const firebaseOptions = FirebaseOptions(
@@ -60,6 +61,7 @@ class MyApp extends StatelessWidget {
         },
         '/create-user': (context) => const CreateUserPage(),
         '/company-structure': (context) => const CompanyStructurePage(),
+        '/user-list': (context) => const UserListPage(),
       },
     );
   }

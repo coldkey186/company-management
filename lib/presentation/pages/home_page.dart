@@ -77,6 +77,13 @@ class HomePageState extends State<HomePage> {
                 },
                 child: const Text('Quản lý người dùng'),
               ),
+            if (_role == 'admin') // Nếu là admin, hiển thị nút Sơ đồ công ty
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/company-structure');
+                },
+                child: const Text('Sơ đồ công ty'),
+              ),
           ],
         ),
       ),

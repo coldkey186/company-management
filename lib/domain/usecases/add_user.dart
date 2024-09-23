@@ -15,6 +15,8 @@ class AddUser {
       name: userEntity.name,
       email: userEntity.email,
       role: userEntity.role,
+      department: userEntity.department,  // Thêm department
+      branch: userEntity.branch,          // Thêm branch
     );
     
     // Gọi UserRepository để tạo người dùng

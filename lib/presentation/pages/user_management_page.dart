@@ -172,7 +172,9 @@ class _UserManagementPageState extends State<UserManagementPage> {
                     child: const Text('Xóa người dùng'),
                   ),
                   ElevatedButton(
-                    onPressed: () => _readUsers(context),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/user-list');
+                    },
                     child: const Text('Xem danh sách người dùng'),
                   ),
                   _buildErrorMessage(), // Hiển thị lỗi nếu có

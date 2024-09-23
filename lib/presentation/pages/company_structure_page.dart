@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:company_management/services/company_service.dart';
-import 'package:company_management/models/company_model.dart';
+import 'package:company_management/data/services/company_service.dart';
+import 'package:company_management/data/models/company_model.dart';
 
 class CompanyStructurePage extends StatefulWidget {
+  const CompanyStructurePage({super.key});
+
   @override
   _CompanyStructurePageState createState() => _CompanyStructurePageState();
 }
@@ -11,7 +13,7 @@ class _CompanyStructurePageState extends State<CompanyStructurePage> {
   final CompanyService _companyService = CompanyService();
   final TextEditingController _companyNameController = TextEditingController();
   final TextEditingController _departmentNameController = TextEditingController();
-  List<String> _departments = [];
+  final List<String> _departments = [];
 
   // Tạo mới cơ sở
   Future<void> _createCompany() async {
@@ -40,7 +42,7 @@ class _CompanyStructurePageState extends State<CompanyStructurePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Sơ đồ công ty')),
+      appBar: AppBar(title: const Text('Sơ đồ công ty')),
       body: Column(
         children: [
           Padding(

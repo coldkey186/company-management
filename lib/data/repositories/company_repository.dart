@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:company_management/models/company_model.dart';
+import 'package:company_management/data/models/company_model.dart';
 
 class CompanyRepository {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;

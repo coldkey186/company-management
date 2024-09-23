@@ -1,6 +1,5 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:company_management/models/company_model.dart';
-import 'package:company_management/repositories/company_repository.dart';
+import 'package:company_management/data/models/company_model.dart';
+import 'package:company_management/data/repositories/company_repository.dart';
 
 class CompanyService {
   final CompanyRepository _companyRepository = CompanyRepository();

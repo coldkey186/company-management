@@ -1,5 +1,5 @@
-import 'package:company_management/repositories/user_repository.dart';
-import 'package:company_management/models/user_model.dart';
+import 'package:company_management/data/repositories/user_repository.dart';
+import 'package:company_management/data/models/user_model.dart';
 
 class UserService {
   final UserRepository _userRepository = UserRepository();
